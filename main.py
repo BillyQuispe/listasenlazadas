@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return "Usage: http://<hostname>[:<prt>]/api/<id>"
+    return "Usage: https://listasenlazadasapi.bjrcode.com [:<prt>]/api/<id>"
 
 @app.route("/api/<int:id>")
 def api(id):
