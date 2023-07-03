@@ -11,9 +11,9 @@ class nodo:
         self.next = None     
 flag = False
 def extract_links(lmt=8):
-    apikey = "EAFavFyRsj4Nrxa8hX20VhwjF92u1z6r";    global flag;
+    apikey = "LIVDSRZULELA";    global flag;
     search_term = "excited"
-    r = requests.get("https://api.giphy.com/v1/gifs/search?q=%s&key=%s&limit=%s" % (search_term, apikey, lmt))
+    r = requests.get("https://g.tenor.com/v1/search?q=%s&key=%s&limit=%s" % (search_term, apikey, lmt))
     if r.status_code == 200:
         top_8gifs = json.loads(r.content)
         for x in range (10000):
