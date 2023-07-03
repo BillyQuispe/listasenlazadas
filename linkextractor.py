@@ -11,9 +11,9 @@ class nodo:
         self.next = None     
 flag = False
 def extract_links(lmt=8):
-    apikey = "LIVDSRZULELA";    global flag;
+    apikey = "YWIxZjAwZDktOTEwMS00NmNiLWFmN2ItNDdlOWRiM2IzZDEz";    global flag;
     search_term = "excited"
-    r = requests.get("https://g.tenor.com/v1/search?q=%s&key=%s&limit=%s" % (search_term, apikey, lmt))
+    r = requests.get("https://reqres.in/api/user?=%s&limit=%s" % (search_term, lmt))
     if r.status_code == 200:
         top_8gifs = json.loads(r.content)
         for x in range (10000):
