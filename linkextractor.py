@@ -37,5 +37,5 @@ def extrae(id):
     while id > t:
         temp = temp.next
         links1 = [{"text": temp.text, "href": temp.href}]
-        t += 1
-    return links1
+        t += 1     
+    return links1
