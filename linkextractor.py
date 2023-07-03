@@ -3,7 +3,7 @@
 import sys
 import requests
 import json
-
+from urllib.parse import urljoin
 class Nodo:
     def _init_(self, text, href):
         self.text = text
