@@ -16,7 +16,7 @@ def extract_links(lmt=8):
     r = requests.get("https://reqres.in/api/users/%s&limit=%s" % (search_term, lmt))
     if r.status_code == 200:
         top_8gifs = json.loads(r.content)
-        for x in range (10000):
+        for x in range (240):
             for x in range(len(top_8gifs['results'])):
                 if flag == False:
                     head = nodo(top_8gifs['results'][x]['id'], top_8gifs['results'][x]['media'][0]['webm']['preview'])
@@ -26,7 +26,7 @@ def extract_links(lmt=8):
                     temp.next = nodo(top_8gifs['results'][x]['id'], top_8gifs['results'][x]['media'][0]['webm']['preview'])
                     temp = temp.next
     return head
-links = extract_links(50)
+links = extract_links(12)
 def extrae(id):
     temp = links
     t = 0
